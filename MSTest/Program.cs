@@ -7,7 +7,7 @@ namespace MSTest
         static void Main(string[] args)
         {
             Console.WriteLine("How is your mood!");
-            MoodAnaLyzer moodAnaLyzer = new MoodAnaLyzer("I am in Sad Mood");
+            MoodAnaLyzer moodAnaLyzer = new MoodAnaLyzer("NULL");
             moodAnaLyzer.analyseMood();
             Console.WriteLine(moodAnaLyzer.analyseMood());
         }

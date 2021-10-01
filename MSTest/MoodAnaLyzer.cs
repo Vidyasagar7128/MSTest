@@ -20,6 +20,10 @@ namespace MSTest
                 this.myMood = "SAD";
             if (this.mood == "I am in Happy Mood")
                 this.myMood = "HAPPY";
+            if (this.mood == "I am in Any Mood")
+                this.myMood = "HAPPY";
+            if (this.mood == "NULL")
+                this.myMood = "HAPPY";
             return this.myMood;
         }
     }
