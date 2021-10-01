@@ -6,9 +6,10 @@ namespace MSTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Mood Analyzer Problem!");
-            MoodAnaLyzer moodAnaLyzer = new MoodAnaLyzer();
-            Console.WriteLine(moodAnaLyzer.Mood());
+            Console.WriteLine("How is your mood!");
+            MoodAnaLyzer moodAnaLyzer = new MoodAnaLyzer("I am in Sad Mood");
+            moodAnaLyzer.analyseMood();
+            Console.WriteLine(moodAnaLyzer.analyseMood());
         }
     }
 }

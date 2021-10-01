@@ -6,15 +6,20 @@ namespace MSTestMoodAnalyzer
     [TestClass]
     public class UnitTest1
     {
-        MoodAnaLyzer moodAnaLyzer = new MoodAnaLyzer();
+        MoodAnaLyzer moodAnaLyzer = new MoodAnaLyzer("I am in Sad Mood");
+        MoodAnaLyzer moodAnaLyzer1 = new MoodAnaLyzer("I am in Happy Mood");
+
         [TestMethod]
-        public void TestMood()
+        public void TestSad()
         {
-            string result = moodAnaLyzer.Mood();
-            if(result == "SAD")
-                Assert.AreEqual(result, "SAD");
-            else
-                Assert.AreEqual(result, "HAPPY");
+            string result = moodAnaLyzer.analyseMood();
+            Assert.AreEqual(result, "SAD");
+        }
+        [TestMethod]
+        public void TestHappy()
+        {
+            string result = moodAnaLyzer1.analyseMood();
+            Assert.AreEqual(result, "HAPPY");
         }
     }
 }

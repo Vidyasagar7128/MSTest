@@ -6,16 +6,21 @@ namespace MSTest
 {
     public class MoodAnaLyzer
     {
+        string mood = "";
         string myMood = "";
-        public string Mood()
+
+        public MoodAnaLyzer() { }
+        public MoodAnaLyzer(string mood)
         {
-            //string mood = Console.ReadLine();
-            string mood = "happy";
-            if (mood == "sad")
-                myMood = "SAD";
-            else if(mood == "happy")
-                myMood = "HAPPY";
-            return myMood;
+            this.mood = mood;
+        }
+        public string analyseMood()
+        {
+            if (this.mood == "I am in Sad Mood")
+                this.myMood = "SAD";
+            if (this.mood == "I am in Happy Mood")
+                this.myMood = "HAPPY";
+            return this.myMood;
         }
     }
 }
